@@ -7,6 +7,7 @@
 * Nếu rồi $\Rightarrow$ lưu giá trị $middle$ lại vào biến $ans$ và giảm giá trị $middle$ để xét xem còn số nào nhỏ hơn nữa hay không.
 
 # **Code**
+**C++**
 ```cpp
 int upper_binary_search(int arr[], int left, int right, int value)
 {
@@ -34,6 +35,7 @@ int upper_binary_search(int arr[], int left, int right, int value)
     return ans;
 }
 ```
+
 # **Sử dụng hàm sẵn có trong thư viện STL**
 *Thư viện STL của C++ cung cấp sẵn hàm _upper_bound()_ với công dụng gần tương tự như trên. Điểm khác biệt nằm ở tham số truyền vào _(args)_ và giá trị trả về _(return value)_.*
 
@@ -56,6 +58,10 @@ int index = upper_bound(arr, arr + n, 24) - arr;
 
 \\lúc này arr[index] là giá trị nhỏ nhất lớn hơn 24
 ```
+
+# Xem thêm tại
+1. [upper_bound in C++ - GeeksforGeeks](https://www.geeksforgeeks.org/upper_bound-in-cpp/)
+2. [std::upper_bound - cplusplus.com](https://cplusplus.com/reference/algorithm/upper_bound/)
 
 
 
