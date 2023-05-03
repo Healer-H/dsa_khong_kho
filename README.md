@@ -6,6 +6,6 @@
  * _Facebook:_ https://facebook.com/hiuminee/
  * _Email:_ 22520434@gm.uit.edu.vn
 
-# **Chúc bạn học tập thật tốt**
+# **Chúc bạn học tập thật tốt nhé!**
 
 
