@@ -47,11 +47,14 @@ int upper_binary_search(int arr[], int left, int right, int value)
 - Lấy giá trị mong muốn bằng toán tử giải địa chỉ '*': 
 ```
 cout << *upper_bound(arr, arr + n, 24); 
+
 \\in ra giá trị nhỏ nhất lớn hơn 24
 ```
 - Lấy chỉ số của phần tử bằng cách trừ cho con trỏ trỏ vào phần tử đầu tiên: 
 ```
-int index = upper_bound(arr, arr + n, 24) - arr; \\lúc này arr[index] là giá trị nhỏ nhất lớn hơn 24
+int index = upper_bound(arr, arr + n, 24) - arr; 
+
+\\lúc này arr[index] là giá trị nhỏ nhất lớn hơn 24
 ```
 
 
