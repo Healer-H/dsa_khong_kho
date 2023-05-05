@@ -27,8 +27,6 @@ Việc đồng bộ từ Remote về Local là bởi vì thường chúng ta là
 
 ## 3. Nguyên lý hoạt động của Git
 
-![Git Workflow](https://drive.google.com/file/d/1gXNpde7EPWNxBuo9De_hHxN4OJc824CH/view?usp=sharing)
-
 Ngoài vùng Local repo và Remote repo thì chúng ta còn có một vùng nữa là vùng Staging Area. Khi mà chúng ta sửa code, chúng ta đang sửa trên code thôi. Sau đó chúng ta cần phải đẩy code lên Staging Area, rồi đến Local repo, cuối cùng là Remote repo. Để đẩy code lên Staging Area, ta dùng câu lệnh `git add`. Lúc này code đang nằm ở Staging Area và đã sẵn sàng để được đẩy lên Local repo, chúng ta có thể kiểm tra file nào đã sẵn sàng được đẩy lên bằng câu lệnh `git status`. Muốn đẩy code từ Staging Area lên Local repo ta chỉ cần gõ lệnh `git commit`. Thông thường câu lệnh này kèm theo một tham số `-m` với ý nghĩa là 'message' giống như kiểu để lại cái comment để cho người khác biết cái commit này có tác dụng là gì. Cuối cùng là tui sẽ đẩy code lên Remote repo bằng câu lệnh `git push`. Ví dụ tui fix được cái bug của hàm tính tổng, quá trình đẩy code mới lên từ máy của tui diễn ra như sau.
 
 ```git
@@ -74,6 +72,8 @@ Ngoài ra thì làm việc với Git chúng ta chủ yếu gõ lệnh trên comm
 
 1. [Từ gà tới pro Git và Github trong 20 phút - Tự học Git siêu tốc - toidicođeao](https://www.youtube.com/watch?v=1JuYQgpbrW0)
 
-2. [Git Tutorial for Beginners: Learn Git in 1 Hour](https://www.youtube.com/watch?v=8JJ101D3knE)
+2. [Git Tutorial for Beginners: Learn Git in 1 Hour -
+Programming with Mosh
+](https://www.youtube.com/watch?v=8JJ101D3knE)
 
 3. [Git Tutorial - w3school](https://www.w3schools.com/git/default.asp)
