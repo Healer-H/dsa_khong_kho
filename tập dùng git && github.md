@@ -70,7 +70,7 @@ Ngoài ra thì làm việc với Git chúng ta chủ yếu gõ lệnh trên comm
 
 ## Tham khảo thêm tại
 
-1. [Từ gà tới pro Git và Github trong 20 phút - Tự học Git siêu tốc - toidicođeao](https://www.youtube.com/watch?v=1JuYQgpbrW0)
+1. [Từ gà tới pro Git và Github trong 20 phút - Tự học Git siêu tốc - toidicodedao](https://www.youtube.com/watch?v=1JuYQgpbrW0)
 
 2. [Git Tutorial for Beginners: Learn Git in 1 Hour -
 Programming with Mosh
