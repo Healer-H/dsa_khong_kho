@@ -29,13 +29,30 @@ void Insert(TREE &T, int value)
         return;
     }
 
-    if (T->key == addNode->key)
-        return;
-
-    if (T->key < addNode->key)
-        Insert(T->pLeft, value);
-    else
-        Insert(T->pRight, value);
+    TNODE *it = T;
+    while (true)
+    {
+        if (addNode->key == it->key)
+            return;
+        if (addNode->key < it->key)
+        {
+            if (it->pLeft == NULL)
+            {
+                it->pLeft = addNode;
+                return;
+            }
+            it = it->pLeft;
+        }
+        else
+        {
+            if (it->pRight == NULL)
+            {
+                it->pRight = addNode;
+                return;
+            }
+            it = it->pRight;
+        }
+    }
 }
 
 void CreateTree(TREE &T)
@@ -49,44 +66,52 @@ void CreateTree(TREE &T)
     }
 }
 
+int CountNode(TREE T)
+{
+    if (T == NULL)
+        return 0;
+    return 1 + CountNode(T->pLeft) + CountNode(T->pRight);
+}
+
 bool IsCompleteBST(TREE T)
 {
     if (T == NULL)
         return true;
     queue<TNODE *> bfs;
     bfs.push(T);
-    int numNode = 1;
-    int maximunNumNode = 1;
-
-    while (maximunNumNode == numNode)
+    bool flag = true;
+    TNODE *it;
+    while (!bfs.empty())
     {
+        int numNode = bfs.size();
         while (numNode--)
         {
-            TNODE *it = bfs.front();
+            it = bfs.front();
             bfs.pop();
-            if (it->pLeft != NULL)
-                bfs.push(it->pLeft);
-            if (it->pRight != NULL)
-                bfs.push(it->pRight);
+            if (flag)
+            {
+                if (it->pLeft != NULL)
+                    bfs.push(it->pLeft);
+                else
+                {
+                    flag = false;
+                }
+                if (it->pRight != NULL)
+                    bfs.push(it->pRight);
+                else
+                {
+                    flag = false;
+                }
+            }
+            else
+            {
+                if(it->pLeft != NULL || it->pRight != NULL)
+                    return false;
+            }
         }
-
-        numNode = (int)bfs.size();
-
-        maximunNumNode *= 2;
     }
-    
-    queue <TNODE*> copyBFS(bfs);
-    while(!copyBFS.empty())
-    {
-        TNODE* it = copyBFS.front();
-        copyBFS.pop();
-        if(it->pLeft != NULL || it->pRight != NULL)
-            return false;
-    }
-
-
+    return true;
 }
-
 /* ------------------------------------- */
 
 int main()
