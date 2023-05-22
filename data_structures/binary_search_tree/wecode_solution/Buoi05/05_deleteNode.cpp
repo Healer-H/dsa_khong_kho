@@ -11,12 +11,17 @@ struct TNODE
 typedef TNODE *TREE;
 
 /* --------------------------------------------- */
+
+TNODE *CreateNode(int item)
+{
+    TNODE *newNode = new TNODE;
+    newNode->key = item;
+    newNode->pLeft = newNode->pRight = NULL;
+    return newNode;
+}
 void Insert(TREE &T, int item)
 {
-    TNODE *addNode = new TNODE;
-    addNode->key = item;
-    addNode->pLeft = addNode->pRight = NULL;
-
+    TNODE *addNode = CreateNode(item);
     if (T == NULL)
     {
         T = addNode;
@@ -60,54 +65,61 @@ void CreateTree(TREE &T)
     }
 }
 
+void replace(TREE& node, TREE& replaceNode)
+{
+    if(replaceNode->pLeft != NULL)
+        replace(node, replaceNode->pLeft);
+    else
+    {
+        node->key = replaceNode->key;
+        node = replaceNode;
+        replaceNode = replaceNode->pRight;
+    }
+}
 void DeleteNode(TREE &T, int item)
 {
     if (T == NULL)
         return;
     if (item < T->key)
         DeleteNode(T->pLeft, item);
-    if (item > T->key)
+    else if (item > T->key)
         DeleteNode(T->pRight, item);
-
-    if (T->pLeft == NULL)
-    {
-        T = T->pRight;
-        return;
-    }
-    if (T->pRight == NULL)
-    {
-        T = T->pLeft;
-        return;
-    }
-
-    TNODE *tmp = T->pRight, *tmpParent = T;
-    while (tmp->pLeft != NULL)
-    {
-        tmpParent = tmp;
-        tmp = tmp->pLeft;
-    }
-    if (tmpParent != T)
-    {
-        T->key = tmp->key;
-        tmpParent->pLeft = tmp->pRight;
-        return;
-    }
     else
     {
-        T->key = tmp->key;
-        T->pRight = tmp->pRight;
-        return;
+        if (T->pLeft == NULL)
+        {
+            T = T->pRight;
+            return;
+        }
+        if (T->pRight == NULL)
+        {
+            T = T->pLeft;
+            return;
+        }
+        TNODE* tmp = T;
+        replace(tmp, T->pRight);
+        delete tmp;
+    }
+}
+
+void PrintTreeNLR(TREE T)
+{
+    if (T != NULL)
+    {
+        cout << T->key << " ";
+        PrintTreeNLR(T->pLeft);
+        PrintTreeNLR(T->pRight);
     }
 }
 
 void PrintTree(TREE T)
 {
-    if (T != NULL)
+    if(T == NULL)
     {
-        cout << T->key << " ";
-        PrintTree(T->pLeft);
-        PrintTree(T->pRight);
+        cout << "Empty Tree. \n";
     }
+    else
+        PrintTreeNLR(T);
 }
 
 /* --------------------------------------------- */
@@ -125,6 +137,7 @@ int main()
     cout << endl;
 
     DeleteNode(T, x);
+    // cout << (findNode(T, 30))->key;
     PrintTree(T);
 
     return 0;
