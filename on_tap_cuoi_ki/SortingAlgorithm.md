@@ -1,6 +1,6 @@
 # Sorting Algorithm
 
-## 1. Bubble Sort
+## 1. Interchange Sort
 
 ### Ý tưởng
 
@@ -18,7 +18,7 @@ for i: 0 --> n - 2
 ### Code
 
 ```cpp
-void bubble_sort(int arr[], int n)
+void interchange_sort(int arr[], int n)
 {
     for(int i = 0; i < n - 1; i++)
     {
@@ -342,3 +342,56 @@ void heapSort(int arr[], int n)
     Worst Case: O(NlogN)
 
 *Space Complexity:* O(N)
+
+
+## 7. Bubble Sort
+
+### Ý tưởng
+
+Duyệt từ đầu này sang đầu kia của mảng, tại mỗi vị trí nếu thứ tự của cặp phần tử liền kề chưa đúng thì ta tiến hành đổi chỗ hai giá trị. Sau mỗi bước phần tử lớn nhất sẽ được đặt vào đúng vị trí.
+
+### Mã giả
+
+```
+for i: 0 --> n - 2
+    bool swapped = false
+    for j: 0 --> n - i - 1
+        if: arr[j] > arr[j + 1]
+            swap(arr[j], arr[j + 1])
+            swapped = true
+    if: swapped == false
+        return;
+    
+```
+
+### Code
+
+```cpp
+void bubble_sort(int arr[], int n)
+{
+    for(int i = 0; i < n - 1; i++)
+    {
+        bool swapped = false;
+        for(int j = 0; j < n - i - 1; j++)
+        {
+            if(arr[j] > arr[j + 1])
+            {
+                swap(arr[j], arr[j + 1]);
+                swapped = true;
+            }            
+        }
+        if(swapped == false)
+            return;
+    }
+}
+```
+
+### Độ phức tạp
+
+*Time Complexity:*
+
+    Best Case: O(N^2)
+    Avg Case: O(N^2)
+    Worst Case: O(N^2)
+
+*Space Complexity:* O(1)
