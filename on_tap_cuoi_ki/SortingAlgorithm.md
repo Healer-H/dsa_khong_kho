@@ -390,7 +390,7 @@ void bubble_sort(int arr[], int n)
 
 *Time Complexity:*
 
-    Best Case: O(N^2)
+    Best Case: O(N)
     Avg Case: O(N^2)
     Worst Case: O(N^2)
 
