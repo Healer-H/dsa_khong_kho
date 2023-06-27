@@ -214,7 +214,70 @@ void merge_sort(int arr[], int left, int right)
 *Space Complexity:* O(N)
 
 ## 5. Quick Sort
+### Ý tưởng
 
+Chia để trị, mỗi lần chia thì ta chọn ra một giá trị pivot để phân hoạch dãy ban đầu thành S1 và S2 thỏa mãn S1 < pivot < S2.
+
+### Mã giả
+
+```
+Tham khảo code bên dưới
+```
+
+### Code
+
+```cpp
+int partition(int arr[], int low, int high)
+{
+    int pivot = arr[low];
+    int i = low - 1, j = high + 1;
+ 
+    while (true) {
+        // Find leftmost element greater than
+        // or equal to pivot
+        do {
+            i++;
+        } while (arr[i] < pivot);
+ 
+        // Find rightmost element smaller than
+        // or equal to pivot
+        do {
+            j--;
+        } while (arr[j] > pivot);
+        // 5 3 7 1 2 3 10 9
+ 
+        // If two pointers met.
+        if (i >= j)
+            return j;
+ 
+        swap(arr[i], arr[j]);
+    }
+}
+
+void quick_sort(int arr[], int left, int right)
+{
+    if(left >= right)
+        return;
+    int mid = partition(arr, left, right);
+    quick_sort(arr, left, mid);
+    quick_sort(arr, mid + 1, right);
+}
+```
+
+### Độ phức tạp
+
+*Time Complexity:*
+
+    Best Case: O(NlogN)
+    Avg Case: O(NlogN)
+    Worst Case: O(N^2) // phụ thuộc vào giá trị pivot của mỗi lần chọn
+        // toàn bộ phần tử bằng nhau
+        // chọn phải phần tử nhỏ nhất
+        // chọn phải phần tử lớn nhất
+        // std::sort() sử dụng quick_sort làm hàm chính
+
+
+*Space Complexity:* O(logN)
 ## 6. Heap Sort
 
 ### Ý tưởng
