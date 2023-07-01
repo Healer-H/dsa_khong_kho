@@ -14,7 +14,7 @@ Tính đa hình mang lại nhiều lợi ích trong lập trình hướng đối
 
 ## Cách thể hiện tính đóng gói trong mã nguồn
 
-Tính đa hình được thể hiện thông qua việc sử dụng các khái niệm như lớp cha, lớp con, phương thức ảo (virtual), và ghi đè phương thức (override).
+Tính đa hình được thể hiện thông qua việc sử dụng các khái niệm như lớp cha, lớp con, phương thức ảo (virtual), nạp chồng (overloading) và ghi đè phương thức (override).
 
 - Nạp chồng (Overloading): Đây là khả năng cho phép một lớp có nhiều thuộc tính, phương thức cùng tên nhưng với các tham số khác nhau về loại cũng như về số lượng. Khi được gọi, dựa vào tham số truyền vào, phương thức tương ứng sẽ được thực hiện.
 
