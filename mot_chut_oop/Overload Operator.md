@@ -2,7 +2,7 @@
 
 Overload operator là nội dung có khả năng cao sẽ xuất hiện trong đề thi OOP năm nay. Thông thường để overload operator người ta sẽ sử dụng hàm bạn `friend()` kết hợp với ép kiểu bằng `constructor()` để code có tính tổng quát.
 
-Một số operator có cách overload hơi đặc biệt như `toán tử cộng/trư trước [++, --]`, `toán tử cộng/trư sau [++, --]`, `toán tử dịch bit (dùng cho nhập xuất) [>>, <<]`
+Một số operator có cách overload hơi đặc biệt như `toán tử cộng/trừ trước [++, --]`, `toán tử cộng/trừ sau [++, --]`, `toán tử dịch bit (dùng cho nhập xuất) [>>, <<]`
 
 Một số operator như `[ ], ( ), =, ->` bắt buộc phải là phương thức của lớp để toán hạng thứ nhất là một đối tượng của lớp.
 

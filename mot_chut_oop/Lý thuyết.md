@@ -14,3 +14,7 @@
   - Đa hình - Polymorphism
 
 ## Các câu hỏi liên quan tới lý thuyết OOP
+
+1. Lập trình hướng đối tượng là gì? Nêu ưu điểm của lập trình hướng đối tượng.
+2. Nêu các khái niệm: lớp, đối tượng, thể hiện, thuộc tính, phương thức. Cho ví dụ từng thành phần vừa nêu.
+3. Nêu 4 đặc điểm chính của lập trình hướng đối tượng?

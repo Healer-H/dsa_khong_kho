@@ -2,7 +2,7 @@
 
 ## Khái niệm
 
-*Đóng gói* trong Lập trình Hướng đối tượng  cho phép nhóm các thông tin và che dấu chúng - ẩn thông tin và hoạt động nội bộ của một đối tượng để chỉ cho phép truy cập thông qua các thành phần `public` được xác định trước, từ đó đảm bảo được sự toàn vẹn của đối tượng.
+*Đóng gói* trong Lập trình Hướng đối tượng là khả năng cho phép nhóm các thông tin và che dấu chúng - ẩn thông tin và hoạt động nội bộ của một đối tượng để chỉ cho phép truy cập thông qua các thành phần `public` được xác định trước, từ đó đảm bảo được sự toàn vẹn của đối tượng.
 
 ## Ví dụ
 

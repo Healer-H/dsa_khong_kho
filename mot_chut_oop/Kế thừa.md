@@ -58,7 +58,7 @@ Cụ thể
 
 - Quản lý và tổ chức mã: Kế thừa giúp tổ chức mã theo cấu trúc phân cấp. Các lớp con có thể được nhóm lại và được quản lý dễ dàng trong một cấu trúc phân cấp, làm cho mã trở nên rõ ràng và dễ hiểu hơn. Điều này cũng giúp quản lý và bảo trì mã dễ dàng hơn khi cần thay đổi hoặc mở rộng tính năng.
 
-## Cách thể hiện tính Kế thừa trong mã nguồn
+## Cách thể hiện tính kế thừa trong mã nguồn
 
 Trong C++, tính kế thừa được thể hiện bằng toán tủ `:` kèm với các từ khóa chỉ phạm vi như `public`, `protected`, `privated`.
 
